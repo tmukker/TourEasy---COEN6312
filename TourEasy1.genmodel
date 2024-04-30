@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/TourEasy/src" modelPluginID="TourEasy" modelName="TourEasy1"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="17.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURES" value="PROCESS"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="PROCESS"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="PROCESS"/>
+    <details key="REDEFINING_OPERATIONS" value="PROCESS"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATIONS" value="PROCESS"/>
+    <details key="NON_API_INVARIANTS" value="PROCESS"/>
+    <details key="CAMEL_CASE_NAMES" value="PROCESS"/>
+    <details key="SUBSETTING_PROPERTIES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="PROCESS"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="PROCESS"/>
+    <details key="INVOCATION_DELEGATES" value="PROCESS"/>
+    <details key="VALIDATION_DELEGATES" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>TourEasy.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="TourEasy" disposableProviderFactory="true"
+      ecorePackage="tourEasy.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Booking">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Booking/bookingId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Booking/tourId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Booking/customerId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Booking/date"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Booking/status"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Booking/paymentStatus"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Booking/paymentInf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Booking/specialRequest"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Booking/booking"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Booking/paymentinfo"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Booking/customer"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//PaymentInfo">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//PaymentInfo/billingName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//PaymentInfo/billingAddress"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//PaymentInfo/preferredModeOfPayment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//PaymentInfo/walletDetails"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//PaymentInfo/cardDetails"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//PaymentInfo/wallet"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//PaymentMode">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//PaymentMode/paymentMode"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Wallet">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Wallet/walletId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Wallet/walletBalance"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="tourEasy.ecore#//Wallet/topUp">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="tourEasy.ecore#//Wallet/topUp/amount"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="tourEasy.ecore#//Wallet/withdraw">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="tourEasy.ecore#//Wallet/withdraw/amount"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//SpecialRequest">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//SpecialRequest/isApproved"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//SpecialRequest/description"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Customer">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Customer/personalAddress"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Customer/paymentInf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Customer/paymentinfo"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//User">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//User/password"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//User/role"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Person">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Person/knownlanguages"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Person/firstName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Person/lastName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Person/dob"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Person/contactNo"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Person/email"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//KnownLanguages">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//KnownLanguages/knownLanguages"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Role">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Role/role"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Hotel">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Hotel/hotelName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Hotel/hotelAddress"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Hotel/manager"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Hotel/cityName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Hotel/numberOfAvailableRooms"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Hotel/price"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Hotel/hotelId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Hotel/person"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Rating">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Rating/ratingId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Rating/tourId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Rating/stars"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Rating/guideId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Rating/customerId"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Tour">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Tour/tourId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Tour/destination"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Tour/numberOfNights"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Tour/hotel"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Tour/inCityModeOfTransport"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Tour/guide"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Destination">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Destination/destinationId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Destination/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Destination/attractions"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Destination/description"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//ModeOfTransport">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//ModeOfTransport/modeOfTransport"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Guide">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Guide/guideCharges"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Review">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Review/reviewId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Review/comment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Review/date"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Notification">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Notification/notificationId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Notification/email"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Notification/message"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Notification/status"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Notification/date"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Promotion">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Promotion/promotionId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Promotion/tourId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Promotion/discountPercentage"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Promotion/startDate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Promotion/endDate"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="tourEasy.ecore#//Admin">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Admin/department"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference tourEasy.ecore#//Admin/supervisor"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute tourEasy.ecore#//Admin/salary"/>
+    </genClasses>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
+      disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
+  </genPackages>
+</genmodel:GenModel>

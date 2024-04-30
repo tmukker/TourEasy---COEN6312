@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tourEasy" nsURI="http:///tourEasy.ecore" nsPrefix="tourEasy">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="TourEasy"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Booking">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="bookingID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tourId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="tourID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="customerID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentStatus" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentInf" ordered="false"
+        lowerBound="1" eType="#//PaymentInfo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialRequest" ordered="false"
+        lowerBound="1" eType="#//SpecialRequest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
+        eType="#//SpecialRequest" containment="true">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="specialrequest"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentinfo" ordered="false"
+        lowerBound="1" eType="#//PaymentInfo">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="booking"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customer" ordered="false"
+        lowerBound="1" eType="#//Customer">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="booking"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentInfo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="billingName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="billingAddress" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preferredModeOfPayment"
+        ordered="false" lowerBound="1" eType="#//PaymentMode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="walletDetails" ordered="false"
+        lowerBound="1" eType="#//Wallet"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardDetails" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wallet" ordered="false"
+        eType="#//Wallet">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="paymentinfo"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentMode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentMode" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wallet">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="wallet"/>
+    </eAnnotations>
+    <eOperations name="topUp" ordered="false" lowerBound="1">
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
+    </eOperations>
+    <eOperations name="withdraw" ordered="false" lowerBound="1">
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="walletId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="walletID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="walletBalance" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecialRequest">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isApproved" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Customer" eSuperTypes="#//User">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="personalAddress" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentInf" ordered="false"
+        lowerBound="1" eType="#//PaymentInfo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentinfo" ordered="false"
+        eType="#//PaymentInfo" containment="true">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="customer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" ordered="false" lowerBound="1"
+        eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="knownlanguages" ordered="false"
+        unique="false" lowerBound="1" eType="#//KnownLanguages"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dob" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contactNo" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KnownLanguages">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="knownLanguages" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hotel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hotelName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hotelAddress" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manager" ordered="false"
+        lowerBound="1" eType="#//Person"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cityName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfAvailableRooms"
+        ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hotelId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" ordered="false"
+        eType="#//Person" containment="true">
+      <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+        <details key="body" value="hotel"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rating">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ratingId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="ratingID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tourId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="tourID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stars" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guideId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="guideID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="customerID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tour">
+    <eAnnotations source="duplicates">
+      <contents xsi:type="ecore:EReference" name="destination" ordered="false" eType="#//Destination"
+          containment="true">
+        <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+          <details key="body" value="tour"/>
+        </eAnnotations>
+        <eAnnotations source="redefines" references="#//Tour/destination"/>
+      </contents>
+      <contents xsi:type="ecore:EReference" name="hotel" ordered="false" eType="#//Hotel"
+          containment="true">
+        <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+          <details key="body" value="tour"/>
+        </eAnnotations>
+        <eAnnotations source="redefines" references="#//Tour/hotel"/>
+      </contents>
+      <contents xsi:type="ecore:EReference" name="guide" ordered="false" eType="#//Guide">
+        <eAnnotations source="http://schema.omg.org/spec/MOF/2.0/emof.xml#Property.oppositeRoleName">
+          <details key="body" value="tour"/>
+        </eAnnotations>
+        <eAnnotations source="redefines" references="#//Tour/guide"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tourId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" ordered="false"
+        eType="#//Destination"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfNights" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hotel" ordered="false"
+        eType="#//Hotel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inCityModeOfTransport"
+        ordered="false" lowerBound="1" eType="#//ModeOfTransport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="guide" ordered="false"
+        eType="#//Guide"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Destination">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="destinationId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attractions" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModeOfTransport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modeOfTransport" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Guide" eSuperTypes="#//User">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guideCharges" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Review" eSuperTypes="#//Rating">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reviewId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="reviewID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Notification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notificationId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="notificationID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Promotion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="promotionId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="promotionID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tourId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="tourID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="discountPercentage" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Real"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Admin" eSuperTypes="#//User">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="department" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supervisor" ordered="false"
+        lowerBound="1" eType="#//Admin"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+  </eClassifiers>
+</ecore:EPackage>
